@@ -102,7 +102,7 @@ Checklist:
 1. Add runtime-specific sources
 
     - Add `src/main/resources/archetype-resources/src/main/scala-<yourRuntimeId>/...`.
-    - Keep shared code in `src/main/resources/archetype-resources/src/main/scala-common/`.
+    - Keep shared code in `src/main/resources/archetype-resources/src/main/scala/`.
 
 1. Add an integration test case under `src/it/`
 

@@ -60,7 +60,7 @@ This still satisfies the parameterization requirement, keeps the generated proje
 
 6. Configure archetype metadata to include all runtime trees cleanly.
    - Template layout:
-     - Keep runtime source trees in distinct folders under the template (e.g., `src/main/scala-common`, `src/main/scala-fabric13`, `src/main/scala-fabric20`, etc.).
+     - Keep runtime source trees in distinct folders under the template (e.g., `src/main/scala`, `src/main/scala-fabric13`, `src/main/scala-fabric20`, etc.).
      - Do not place all runtime sources under the same Maven default source root in the template; rely on Step 4’s `build-helper-maven-plugin` to select one runtime at build time.
    - In `archetype-metadata.xml`:
      - Include fileSets for common + all runtime source trees, and mark them as `filtered=true` so standard Maven properties are replaced.

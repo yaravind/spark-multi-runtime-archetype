@@ -70,7 +70,7 @@ Under `src/main/resources/archetype-resources/src/main/`:
 - Add the minimal runtime-specific entry point(s) mirroring existing runtimes.
   - Prefer copying an existing runtime source directory that is closest (same Scala binary / same major Spark generation).
 
-Do not duplicate code already in `scala-common/`.
+Do not duplicate code already in `scala/`.
 
 ### 3) Add Maven Invoker integration test case
 

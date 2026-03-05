@@ -19,11 +19,25 @@
           <releases><enabled>true</enabled></releases>
           <snapshots><enabled>false</enabled></snapshots>
         </repository>
+        <repository>
+          <id>sonatype-nexus-releases</id>
+          <name>Sonatype Nexus Releases</name>
+          <url>https://oss.sonatype.org/content/repositories/releases/</url>
+          <releases><enabled>true</enabled></releases>
+          <snapshots><enabled>false</enabled></snapshots>
+        </repository>
       </repositories>
       <pluginRepositories>
         <pluginRepository>
           <id>central</id>
           <url>https://repo.maven.apache.org/maven2</url>
+          <releases><enabled>true</enabled></releases>
+          <snapshots><enabled>false</enabled></snapshots>
+        </pluginRepository>
+        <pluginRepository>
+          <id>sonatype-nexus-releases</id>
+          <name>Sonatype Nexus Releases</name>
+          <url>https://oss.sonatype.org/content/repositories/releases/</url>
           <releases><enabled>true</enabled></releases>
           <snapshots><enabled>false</enabled></snapshots>
         </pluginRepository>

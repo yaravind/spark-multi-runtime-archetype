@@ -17,6 +17,7 @@
         <include>pom.xml</include>
         <include>README.md</include>
         <include>.gitignore</include>
+        <include>settings.xml</include>
       </includes>
     </fileSet>
 
@@ -27,7 +28,7 @@
     </fileSet>
 
     <fileSet filtered="true" packaged="true" encoding="UTF-8">
-      <directory>src/main/scala-common</directory>
+      <directory>src/main/scala</directory>
       <includes>
         <include>**/*.scala</include>
       </includes>

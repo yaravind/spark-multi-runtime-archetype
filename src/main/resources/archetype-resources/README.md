@@ -36,7 +36,7 @@ Do not commit credentials into the project.
 
 This template generates all runtime-specific source roots and uses Maven profiles to compile only the selected runtime.
 
-- Common sources: `src/main/scala-common`
+- Common sources: `src/main/scala`
 - Runtime sources: `src/main/scala-fabric13`, `src/main/scala-fabric20`, `src/main/scala-databricks180`, `src/main/scala-synapse34`
 
 The common code depends on a runtime-provided `SparkRuntime` object.

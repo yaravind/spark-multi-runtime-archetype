@@ -110,12 +110,64 @@ From any folder, generate a new project:
 mvn -B archetype:generate \
   -DarchetypeGroupId=io.github.yaravind \
   -DarchetypeArtifactId=spark-initializr \
-  -DarchetypeVersion=1.0.0 \
+  -DarchetypeVersion=0.1.0 \
   -Druntime=fabric13 \
   -DgroupId=com.example \
-  -DartifactId=my-spark-app \
-  -Dversion=0.1.0-SNAPSHOT \
-  -Dpackage=com.example.app
+  -DartifactId=my-data-product \
+  -Dversion=1.0.0-SNAPSHOT \
+  -Dpackage=com.mydataproduct.example
+```
+
+Log
+
+```console
+Developer % mvn -B archetype:generate \
+  -DarchetypeGroupId=io.github.yaravind \
+  -DarchetypeArtifactId=spark-initializr \
+  -DarchetypeVersion=0.1.0 \
+  -Druntime=fabric13 \
+  -DgroupId=com.example \
+  -DartifactId=my-data-product \
+  -Dversion=1.0.0-SNAPSHOT \
+  -Dpackage=com.mydataproduct.example \
+  -s /Users/TestUser/.m2/settings.xml
+
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< org.apache.maven:standalone-pom >-------------------
+[INFO] Building Maven Stub Project (No POM) 1
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] >>> archetype:3.4.1:generate (default-cli) > generate-sources @ standalone-pom >>>
+[INFO] 
+[INFO] <<< archetype:3.4.1:generate (default-cli) < generate-sources @ standalone-pom <<<
+[INFO] 
+[INFO] 
+[INFO] --- archetype:3.4.1:generate (default-cli) @ standalone-pom ---
+[INFO] Generating project in Batch mode
+[INFO] Archetype repository not defined. Using the one from [io.github.yaravind:spark-initializr:0.1.0-SNAPSHOT] found in catalog local
+[INFO] ----------------------------------------------------------------------------
+[INFO] Using following parameters for creating project from Archetype: spark-initializr:0.1.0
+[INFO] ----------------------------------------------------------------------------
+[INFO] Parameter: groupId, Value: com.example
+[INFO] Parameter: artifactId, Value: my-data-product
+[INFO] Parameter: version, Value: 1.0.0-SNAPSHOT
+[INFO] Parameter: package, Value: com.mydataproduct.example
+[INFO] Parameter: packageInPathFormat, Value: com/mydataproduct/example
+[INFO] Parameter: package, Value: com.mydataproduct.example
+[INFO] Parameter: groupId, Value: com.example
+[INFO] Parameter: runtime, Value: fabric13
+[INFO] Parameter: artifactId, Value: my-data-product
+[INFO] Parameter: version, Value: 1.0.0-SNAPSHOT
+[WARNING] Don't override file /Users/TestUser/Developer/my-data-product/pom.xml
+[INFO] Project created from Archetype in dir: /Users/TestUser/Developer/my-data-product
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.275 s
+[INFO] Finished at: 2026-03-04T13:50:42-05:00
+[INFO] ------------------------------------------------------------------------
+Developer %
 ```
 
 Then:
@@ -151,7 +203,8 @@ mvn -B archetype:generate \
   -DgroupId=com.example \
   -DartifactId=my-spark-app \
   -Dversion=0.1.0-SNAPSHOT \
-  -Dpackage=com.example.app
+  -Dpackage=com.example.app \
+  -s settings.xml
 ```
 
 Then:
@@ -164,7 +217,7 @@ cd my-spark-app
 
 The generated app contains:
 
-- common sources: `src/main/scala-common`
+- common sources: `src/main/scala`
 - runtime sources: `src/main/scala-<runtime>`
 
 Pick a runtime at build time with `-Druntime=...`.
